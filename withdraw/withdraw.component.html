@@ -1,0 +1,32 @@
+<div class="co-md-8 offset-md-3">
+
+    <h1 class="text-center">Withdraw</h1>
+
+<!-- we have writte method for to display the error and success message for that method 
+only we are writing here alert message -->
+
+  
+  <div *ngIf="successMessage" class="alert alert-success">
+    {{ successMessage }}
+  </div>
+  
+  <div *ngIf="errorMessage" class="alert alert-danger">
+    {{ errorMessage }}
+  </div>
+
+  
+
+    <form (ngSubmit)="onSubmit()">
+
+        <div>
+            <label>Balance</label>
+            <input type="text" name="balance" id="balance" class="form-control" placeholder="enter your balance"
+                [(ngModel)]="account.balance" />
+        </div>
+
+        <br>
+
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+
+</div>
